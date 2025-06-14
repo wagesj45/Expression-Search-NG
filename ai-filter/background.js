@@ -1,5 +1,45 @@
-browser.runtime.onMessage.addListener((msg) => {
-  if (msg && msg.type === "aiFilter:test") {
-    return browser.experiments.aiFilter.classify(msg);
-  }
+﻿/*
+ * Runs in the **WebExtension (addon)** context.
+ * For this minimal working version we only expose an async helper
+ * so UI pages / devtools panels can test the classifier without
+ * needing Thunderbird’s filter engine.
+ *
+ * Note: the filter-engine itself NEVER calls this file – the
+ * synchronous work is all done in experiment/api.js (chrome side).
+ */
+
+"use strict";
+
+// Startup
+console.log("[ai-filter] background.js loaded – ready to classify");
+
+// Listen for messages from UI/devtools
+browser.runtime.onMessage.addListener(async (msg) => {
+    console.log("[ai-filter] onMessage received:", msg);
+
+    if (msg?.type === "aiFilter:test") {
+        const { text = "", criterion = "" } = msg;
+        console.log("[ai-filter] aiFilter:test – text:", text);
+        console.log("[ai-filter] aiFilter:test – criterion:", criterion);
+
+        try {
+            console.log("[ai-filter] Calling browser.experiments.aiFilter.classify()");
+            const result = await browser.experiments.aiFilter.classify(text, criterion);
+            console.log("[ai-filter] classify() returned:", result);
+            return { match: result };
+        }
+        catch (err) {
+            console.error("[ai-filter] Error in classify():", err);
+            // rethrow so the caller sees the failure
+            throw err;
+        }
+    }
+    else {
+        console.warn("[ai-filter] Unknown message type, ignoring:", msg?.type);
+    }
+});
+
+// Catch any unhandled rejections
+window.addEventListener("unhandledrejection", ev => {
+    console.error("[ai-filter] Unhandled promise rejection:", ev.reason);
 });

@@ -46,7 +46,7 @@ class ClassificationTerm extends CustomerTermBase {
     if (this.cache.has(key)) return this.cache.get(key);
     let body = getPlainText(msgHdr);
     let payload = JSON.stringify({
-      prompt: `${gSystemPrompt}\n[CRITERION] Â«${value}Â»\n[EMAIL] Â«${body}Â»`
+      prompt: `${gSystemPrompt}\n[CRITERION] «${value}»\n[EMAIL] «${body}»`
     });
     let xhr = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance(Ci.nsIXMLHttpRequest);
     xhr.open("POST", gEndpoint, false);

@@ -18,6 +18,7 @@ class CustomerTermBase {
   getEnabled() { return true; }
   getAvailable() { return true; }
   getAvailableOperators() { return this.operators; }
+  getAvailableValues() { return null; }
 }
 
 function getPlainText(msgHdr) {

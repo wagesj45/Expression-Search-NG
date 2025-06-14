@@ -36,15 +36,29 @@ function getPlainText(msgHdr) {
 }
 
 let gEndpoint = "http://127.0.0.1:5000/v1/classify";
-let gSystemPrompt = "[SYSTEM] You are the mail-classification engine.";
-
-function setConfig({ endpoint, system } = {}) {
+function setConfig({ endpoint } = {}) {
   if (endpoint) {
     gEndpoint = endpoint;
   }
-  if (system) {
-    gSystemPrompt = system;
-  }
+}
+
+function buildPrompt(body, criterion) {
+  return `<|im_start|>system
+You are an email-classification assistant.
+Read the email below and the classification criterion provided by the user.
+
+Return ONLY a JSON object on a single line of the form:
+{"match": true} - if the email satisfies the criterion
+{"match": false} - otherwise
+
+Do not add any other keys, text, or formatting.<|im_end|>
+<|im_start|>user
+**Email Contents**
+\`\`\`
+${body}
+\`\`\`
+Classification Criteria: ${criterion}<|im_end|>
+<|im_start|>assistant`;
 }
 
 class ClassificationTerm extends CustomerTermBase {
@@ -59,8 +73,7 @@ class ClassificationTerm extends CustomerTermBase {
     if (this.cache.has(key)) return this.cache.get(key);
     let body = getPlainText(msgHdr);
     let payload = JSON.stringify({
-      prompt: `${gSystemPrompt}\n[CRITERION] «${value}»\n[EMAIL] «${body}»`,
-      expect: op != Ci.nsMsgSearchOp.DoesntMatch
+      prompt: buildPrompt(body, value)
     });
     let xhr = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance(Ci.nsIXMLHttpRequest);
     xhr.open("POST", gEndpoint, false);

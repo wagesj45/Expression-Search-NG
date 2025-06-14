@@ -4,6 +4,5 @@
   "doesntMatch": { "message": "doesn't match" },
   "options.title": { "message": "AI Filter Options" },
   "options.endpoint": { "message": "Endpoint" },
-  "options.system": { "message": "System prompt" },
   "options.save": { "message": "Save" }
 }

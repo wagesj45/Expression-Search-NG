@@ -14,7 +14,7 @@
 console.log("[ai-filter] background.js loaded – ready to classify");
 (async () => {
     try {
-        const store = await browser.storage.local.get(["endpoint", "system"]);
+        const store = await browser.storage.local.get(["endpoint"]);
         await browser.aiFilter.initConfig(store);
         console.log("[ai-filter] configuration loaded", store);
     } catch (err) {

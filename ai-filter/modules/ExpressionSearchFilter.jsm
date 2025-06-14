@@ -1,9 +1,9 @@
 "use strict";
-var { ExtensionParent } = ChromeUtils.import("resource://gre/modules/ExtensionParent.jsm");
-var { MailServices } = ChromeUtils.import("resource:///modules/MailServices.jsm");
-var { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
-var { NetUtil } = ChromeUtils.import("resource://gre/modules/NetUtil.jsm");
-var { MimeParser } = ChromeUtils.import("resource:///modules/mimeParser.jsm");
+var { ExtensionParent } = ChromeUtils.importESModule("resource://gre/modules/ExtensionParent.sys.mjs");
+var { MailServices }    = ChromeUtils.importESModule("resource:///modules/MailServices.sys.mjs");
+var { Services }        = globalThis || ChromeUtils.importESModule("resource://gre/modules/Services.sys.mjs");
+var { NetUtil }         = ChromeUtils.importESModule("resource://gre/modules/NetUtil.sys.mjs");
+var { MimeParser }      = ChromeUtils.importESModule("resource:///modules/mimeParser.sys.mjs");
 
 var EXPORTED_SYMBOLS = ["AIFilter", "ClassificationTerm"];
 

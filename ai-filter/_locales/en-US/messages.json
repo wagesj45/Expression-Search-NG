@@ -2,6 +2,5 @@
   "classification": { "message": "AI classification" },
   "options.title": { "message": "AI Filter Options" },
   "options.endpoint": { "message": "Endpoint" },
-  "options.system": { "message": "System prompt" },
   "options.save": { "message": "Save" }
 }

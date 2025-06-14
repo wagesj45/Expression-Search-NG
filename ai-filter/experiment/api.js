@@ -1,5 +1,5 @@
 ﻿var { ExtensionCommon } = ChromeUtils.importESModule("resource://gre/modules/ExtensionCommon.sys.mjs");
-var { Services } = globalThis.Services;
+var { Services } = globalThis || ChromeUtils.importESModule("resource://gre/modules/Services.sys.mjs");
 var { MailServices } = ChromeUtils.importESModule("resource:///modules/MailServices.sys.mjs");
 
 console.log("[ai-filter][api] Experiment API module loaded");

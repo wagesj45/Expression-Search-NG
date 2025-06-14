@@ -1,5 +1,0 @@
-jQuery AOP plugin v1.3
-http://jquery-aop.googlecode.com/
-
-Licensed under the MIT license:
-http://www.opensource.org/licenses/mit-license.php

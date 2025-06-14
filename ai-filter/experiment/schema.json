@@ -1,0 +1,15 @@
+[
+  {
+    "namespace": "aiFilter",
+    "functions": [
+      {
+        "name": "classify",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {"name": "msg", "type": "any"}
+        ]
+      }
+    ]
+  }
+]

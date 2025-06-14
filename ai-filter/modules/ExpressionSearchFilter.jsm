@@ -62,10 +62,14 @@ Classification Criteria: ${criterion}<|im_end|>
 }
 
 class ClassificationTerm extends CustomerTermBase {
-  constructor() { super("classification", [Ci.nsMsgSearchOp.Contains]); }
+  constructor() {
+    super("classification", [Ci.nsMsgSearchOp.Matches, Ci.nsMsgSearchOp.DoesntMatch]);
+  }
+
+  needsBody() { return true; }
 
   match(msgHdr, value, op) {
-    let key = msgHdr.messageId + "|" + value;
+    let key = msgHdr.messageId + "|" + op + "|" + value;
     if (this.cache.has(key)) return this.cache.get(key);
     let body = getPlainText(msgHdr);
     let payload = JSON.stringify({
@@ -77,7 +81,12 @@ class ClassificationTerm extends CustomerTermBase {
     try { xhr.send(payload); } catch (e) { }
     let matched = false;
     if (xhr.status == 200) {
-      try { matched = JSON.parse(xhr.responseText).match === true; } catch (e) {}
+      try {
+        matched = JSON.parse(xhr.responseText).match === true;
+      } catch (e) {}
+    }
+    if (op == Ci.nsMsgSearchOp.DoesntMatch) {
+      matched = !matched;
     }
     this.cache.set(key, matched);
     return matched;

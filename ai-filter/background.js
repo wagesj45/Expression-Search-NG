@@ -15,7 +15,7 @@ console.log("[ai-filter] background.js loaded – ready to classify");
 (async () => {
     try {
         const store = await browser.storage.local.get(["endpoint", "system"]);
-        await browser.experiments.aiFilter.initConfig(store);
+        await browser.aiFilter.initConfig(store);
         console.log("[ai-filter] configuration loaded", store);
     } catch (err) {
         console.error("[ai-filter] failed to load config:", err);
@@ -32,8 +32,8 @@ browser.runtime.onMessage.addListener(async (msg) => {
         console.log("[ai-filter] aiFilter:test – criterion:", criterion);
 
         try {
-            console.log("[ai-filter] Calling browser.experiments.aiFilter.classify()");
-            const result = await browser.experiments.aiFilter.classify(text, criterion);
+            console.log("[ai-filter] Calling browser.aiFilter.classify()");
+            const result = await browser.aiFilter.classify(text, criterion);
             console.log("[ai-filter] classify() returned:", result);
             return { match: result };
         }
@@ -51,4 +51,10 @@ browser.runtime.onMessage.addListener(async (msg) => {
 // Catch any unhandled rejections
 window.addEventListener("unhandledrejection", ev => {
     console.error("[ai-filter] Unhandled promise rejection:", ev.reason);
+});
+
+browser.runtime.onInstalled.addListener(async ({ reason }) => {
+    if (reason === "install") {
+        await browser.runtime.openOptionsPage();
+    }
 });

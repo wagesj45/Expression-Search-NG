@@ -1,5 +1,5 @@
 {
-  "classification": { "message": "AI classification�" },
+  "classification": { "message": "AI classification" },
   "options.title": { "message": "AI Filter Options" },
   "options.endpoint": { "message": "Endpoint" },
   "options.system": { "message": "System prompt" },

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "AI Filter",
+  "version": "0.1",
+  "applications": {"gecko": {"id": "ai-filter@example"}},
+  "background": {"scripts": ["background.js"]},
+  "experiment_apis": {
+    "aiFilter": {
+      "schema": "experiment/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["aiFilter"]],
+        "script": "experiment/api.js",
+        "events": ["startup"]
+      }
+    }
+  },
+  "options_ui": {"page": "options.html", "open_in_tab": true},
+  "permissions": ["storage"]
+}

@@ -12,6 +12,15 @@
 
 // Startup
 console.log("[ai-filter] background.js loaded – ready to classify");
+(async () => {
+    try {
+        const store = await browser.storage.local.get(["endpoint", "system"]);
+        await browser.experiments.aiFilter.initConfig(store);
+        console.log("[ai-filter] configuration loaded", store);
+    } catch (err) {
+        console.error("[ai-filter] failed to load config:", err);
+    }
+})();
 
 // Listen for messages from UI/devtools
 browser.runtime.onMessage.addListener(async (msg) => {

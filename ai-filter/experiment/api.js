@@ -19,8 +19,7 @@ function registerResourceUrl(extension, namespace) {
 }
 
 var gTerm;
-var gEndpoint;
-var gSystemPrompt;
+var AIFilterMod;
 
 var aiFilter = class extends ExtensionCommon.ExtensionAPI {
     async onStartup() {
@@ -29,25 +28,10 @@ var aiFilter = class extends ExtensionCommon.ExtensionAPI {
 
         registerResourceUrl(extension, "aifilter");
 
-        try {
-            let store = await extension.storage.local.get(["endpoint", "system"]);
-            console.log("[ai-filter][api] storage loaded:", store);
-            if (store.endpoint) {
-                gEndpoint = store.endpoint;
-                console.log("[ai-filter][api] endpoint set to", gEndpoint);
-            }
-            if (store.system) {
-                gSystemPrompt = store.system;
-                console.log("[ai-filter][api] system prompt set to", gSystemPrompt);
-            }
-        }
-        catch (err) {
-            console.error("[ai-filter][api] error reading storage:", err);
-        }
 
         try {
             console.log("[ai-filter][api] importing ExpressionSearchFilter.jsm");
-            ChromeUtils.import("resource://aifilter/modules/ExpressionSearchFilter.jsm");
+            AIFilterMod = ChromeUtils.import("resource://aifilter/modules/ExpressionSearchFilter.jsm");
             console.log("[ai-filter][api] ExpressionSearchFilter.jsm import succeeded");
         }
         catch (err) {
@@ -67,12 +51,22 @@ var aiFilter = class extends ExtensionCommon.ExtensionAPI {
         console.log("[ai-filter][api] getAPI()");
         return {
             aiFilter: {
+                initConfig: async (config) => {
+                    try {
+                        if (AIFilterMod?.AIFilter?.setConfig) {
+                            AIFilterMod.AIFilter.setConfig(config);
+                            console.log("[ai-filter][api] configuration applied", config);
+                        }
+                    } catch (err) {
+                        console.error("[ai-filter][api] failed to apply config:", err);
+                    }
+                },
                 classify: async (msg) => {
                     console.log("[ai-filter][api] classify() called with msg:", msg);
                     try {
                         if (!gTerm) {
                             console.log("[ai-filter][api] instantiating new ClassificationTerm");
-                            let mod = ChromeUtils.import("resource://aifilter/modules/ExpressionSearchFilter.jsm");
+                            let mod = AIFilterMod || ChromeUtils.import("resource://aifilter/modules/ExpressionSearchFilter.jsm");
                             gTerm = new mod.ClassificationTerm();
                         }
                         console.log("[ai-filter][api] calling gTerm.match()");

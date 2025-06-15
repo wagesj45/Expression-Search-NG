@@ -17,6 +17,15 @@ console.log("[ai-filter] background.js loaded – ready to classify");
         const store = await browser.storage.local.get(["endpoint"]);
         await browser.aiFilter.initConfig(store);
         console.log("[ai-filter] configuration loaded", store);
+        try {
+            await browser.DomContentScript.registerWindow(
+                "chrome://messenger/content/FilterEditor.xhtml",
+                "chrome://aifilter/content/filterEditor.js"
+            );
+            console.log("[ai-filter] registered FilterEditor content script");
+        } catch (e) {
+            console.error("[ai-filter] failed to register content script", e);
+        }
     } catch (err) {
         console.error("[ai-filter] failed to load config:", err);
     }

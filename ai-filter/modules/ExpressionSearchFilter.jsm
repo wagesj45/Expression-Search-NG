@@ -96,7 +96,6 @@ class ClassificationTerm extends CustomerTermBase {
   }
 
   needsBody() { return true; }
-  needsBody = true;
 
   match(msgHdr, value, op) {
     const opName = op === Ci.nsMsgSearchOp.Matches ? "matches" :

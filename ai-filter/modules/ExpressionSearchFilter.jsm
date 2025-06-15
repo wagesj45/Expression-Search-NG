@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 var { ExtensionParent } = ChromeUtils.importESModule("resource://gre/modules/ExtensionParent.sys.mjs");
 var { MailServices }    = ChromeUtils.importESModule("resource:///modules/MailServices.sys.mjs");
 var { Services }        = globalThis || ChromeUtils.importESModule("resource://gre/modules/Services.sys.mjs");
@@ -14,14 +14,39 @@ class CustomerTermBase {
     this.name = this.extension.localeData.localizeMessage(nameId);
     this.operators = operators;
     this.cache = new Map();
+
+    console.log(`[ai-filter][ExpressionSearchFilter] Initialized term base "${this.id}"`);
   }
-  getEnabled() { return true; }
-  getAvailable() { return true; }
-  getAvailableOperators() { return this.operators; }
-  getAvailableValues() { return null; }
+
+  getEnabled() {
+    console.log(`[ai-filter][ExpressionSearchFilter] getEnabled() called on "${this.id}"`);
+    return true;
+  }
+
+  getAvailable() {
+    console.log(`[ai-filter][ExpressionSearchFilter] getAvailable() called on "${this.id}"`);
+    return true;
+  }
+
+  getAvailableOperators() {
+    console.log(`[ai-filter][ExpressionSearchFilter] getAvailableOperators() called on "${this.id}"`);
+    return this.operators;
+  }
+
+  getAvailableValues() {
+    console.log(`[ai-filter][ExpressionSearchFilter] getAvailableValues() called on "${this.id}"`);
+    return null;
+  }
+
+  get attrib() {
+    console.log(`[ai-filter][ExpressionSearchFilter] attrib getter called for "${this.id}"`);
+
+    //return Ci.nsMsgSearchAttrib.Custom;
+  }
 }
 
 function getPlainText(msgHdr) {
+  console.log(`[ai-filter][ExpressionSearchFilter] Extracting plain text for message ID ${msgHdr.messageId}`);
   let folder = msgHdr.folder;
   if (!folder.getMsgInputStream) return "";
   let reusable = {};
@@ -39,11 +64,13 @@ function getPlainText(msgHdr) {
 let gEndpoint = "http://127.0.0.1:5000/v1/classify";
 function setConfig({ endpoint } = {}) {
   if (endpoint) {
+    console.log(`[ai-filter][ExpressionSearchFilter] Endpoint updated to ${endpoint}`);
     gEndpoint = endpoint;
   }
 }
 
 function buildPrompt(body, criterion) {
+  console.log(`[ai-filter][ExpressionSearchFilter] Building prompt with criterion: "${criterion}"`);
   return `<|im_start|>system
 You are an email-classification assistant.
 Read the email below and the classification criterion provided by the user.
@@ -65,44 +92,73 @@ Classification Criteria: ${criterion}<|im_end|>
 class ClassificationTerm extends CustomerTermBase {
   constructor() {
     super("classification", [Ci.nsMsgSearchOp.Matches, Ci.nsMsgSearchOp.DoesntMatch]);
+    console.log(`[ai-filter][ExpressionSearchFilter] ClassificationTerm constructed`);
   }
 
   needsBody() { return true; }
+  needsBody = true;
 
   match(msgHdr, value, op) {
+    const opName = op === Ci.nsMsgSearchOp.Matches ? "matches" :
+                   op === Ci.nsMsgSearchOp.DoesntMatch ? "doesn't match" : `unknown (${op})`;
+    console.log(`[ai-filter][ExpressionSearchFilter] Matching message ${msgHdr.messageId} using op "${opName}" and value "${value}"`);
+
     let key = msgHdr.messageId + "|" + op + "|" + value;
-    if (this.cache.has(key)) return this.cache.get(key);
+    if (this.cache.has(key)) {
+      console.log(`[ai-filter][ExpressionSearchFilter] Cache hit for key: ${key}`);
+      return this.cache.get(key);
+    }
+
     let body = getPlainText(msgHdr);
     let payload = JSON.stringify({
       prompt: buildPrompt(body, value)
     });
+
+    console.log(`[ai-filter][ExpressionSearchFilter] Sending classification request to ${gEndpoint}`);
+
     let xhr = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance(Ci.nsIXMLHttpRequest);
     xhr.open("POST", gEndpoint, false);
     xhr.setRequestHeader("Content-Type", "application/json");
-    try { xhr.send(payload); } catch (e) { }
+
     let matched = false;
-    if (xhr.status == 200) {
+    try {
+      xhr.send(payload);
+    } catch (e) {
+      console.error(`[ai-filter][ExpressionSearchFilter] HTTP request failed:`, e);
+    }
+
+    if (xhr.status === 200) {
       try {
-        matched = JSON.parse(xhr.responseText).match === true;
-      } catch (e) {}
+        const result = JSON.parse(xhr.responseText);
+        matched = result.match === true;
+        console.log(`[ai-filter][ExpressionSearchFilter] Received response:`, result);
+      } catch (e) {
+        console.error(`[ai-filter][ExpressionSearchFilter] Failed to parse response: ${xhr.responseText}`);
+      }
+    } else {
+      console.warn(`[ai-filter][ExpressionSearchFilter] HTTP status ${xhr.status}`);
     }
-    if (op == Ci.nsMsgSearchOp.DoesntMatch) {
+
+    if (op === Ci.nsMsgSearchOp.DoesntMatch) {
       matched = !matched;
+      console.log(`[ai-filter][ExpressionSearchFilter] Operator is "doesn't match" → inverting to ${matched}`);
     }
+
     this.cache.set(key, matched);
+    console.log(`[ai-filter][ExpressionSearchFilter] Final match result: ${matched}`);
     return matched;
   }
 }
 
 (function register() {
+  console.log(`[ai-filter][ExpressionSearchFilter] Registering custom filter term...`);
   let term = new ClassificationTerm();
   if (!MailServices.filters.getCustomTerm(term.id)) {
     MailServices.filters.addCustomTerm(term);
+    console.log(`[ai-filter][ExpressionSearchFilter] Registered term: ${term.id}`);
+  } else {
+    console.log(`[ai-filter][ExpressionSearchFilter] Term already registered: ${term.id}`);
   }
 })();
 
 var AIFilter = {};
-
-// allow other modules to access the term
-AIFilter.ClassificationTerm = ClassificationTerm;
-AIFilter.setConfig = setConfig;

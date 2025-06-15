@@ -110,8 +110,20 @@ class ClassificationTerm extends CustomerTermBase {
 
     let body = getPlainText(msgHdr);
     let payload = JSON.stringify({
-      prompt: buildPrompt(body, value)
+      prompt: buildPrompt(body, value),
+      max_tokens: 4096,
+      temperature: 1.31,
+      top_p: 1,
+      seed: -1,
+      repetition_penalty: 1.0,
+      top_k: 0,
+      min_p: 0.2,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      typical_p: 1,
+      tfs: 1
     });
+
 
     console.log(`[ai-filter][ExpressionSearchFilter] Sending classification request to ${gEndpoint}`);
 
@@ -127,7 +139,10 @@ class ClassificationTerm extends CustomerTermBase {
         console.warn(`[ai-filter][ExpressionSearchFilter] HTTP status ${res.status}`);
       } else {
         const result = await res.json();
-        matched = result.match === true;
+        const rawText = result.choices?.[0]?.text || "";
+        const cleanedText = rawText.replace(/<think>[\s\S]*?<\/think>/gi, "").trim();
+        const obj = JSON.parse(cleanedText);
+        matched = obj.matched === true || obj.match === true;
         console.log(`[ai-filter][ExpressionSearchFilter] Received response:`, result);
 
         console.log(`[ai-filter][ExpressionSearchFilter] Caching:`, key);

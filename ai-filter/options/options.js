@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 document.getElementById('save').addEventListener('click', async () => {
-    await browser.storage.local.set({
-        endpoint: document.getElementById('endpoint').value
-    });
+    const endpoint = document.getElementById('endpoint').value;
+    await browser.storage.local.set({ endpoint });
+    try {
+        await browser.aiFilter.initConfig({ endpoint });
+    } catch (e) {
+        console.error('[ai-filter][options] failed to apply config', e);
+    }
 });

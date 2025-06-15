@@ -14,7 +14,6 @@ class CustomerTermBase {
     this.name = this.extension.localeData.localizeMessage(nameId);
     this.operators = operators;
     this.cache = new Map();
-    setConfig();
 
     console.log(`[ai-filter][ExpressionSearchFilter] Initialized term base "${this.id}"`);
   }
@@ -63,9 +62,10 @@ function getPlainText(msgHdr) {
 }
 
 let gEndpoint = "http://127.0.0.1:5000/v1/classify";
-async function setConfig() {
-    const { endpoint = gEndpoint } = await browser.storage.local.get("endpoint");
-    gEndpoint = endpoint;
+function setConfig(config = {}) {
+    if (config.endpoint) {
+        gEndpoint = config.endpoint;
+    }
     console.log(`[ai-filter][ExpressionSearchFilter] Endpoint set to ${gEndpoint}`);
 }
 
@@ -158,4 +158,4 @@ class ClassificationTerm extends CustomerTermBase {
   }
 })();
 
-var AIFilter = {};
+var AIFilter = { setConfig };

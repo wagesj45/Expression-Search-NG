@@ -61,7 +61,7 @@ var aiFilter = class extends ExtensionCommon.ExtensionAPI {
                         console.error("[ai-filter][api] failed to apply config:", err);
                     }
                 },
-                classify: async (msg) => {
+                classify: (msg) => {
                     console.log("[ai-filter][api] classify() called with msg:", msg);
                     try {
                         if (!gTerm) {
@@ -70,7 +70,7 @@ var aiFilter = class extends ExtensionCommon.ExtensionAPI {
                             gTerm = new mod.ClassificationTerm();
                         }
                         console.log("[ai-filter][api] calling gTerm.match()");
-                        let matchResult = await gTerm.match(
+                        let matchResult = gTerm.match(
                             msg.msgHdr,
                             msg.value,
                             Ci.nsMsgSearchOp.Contains

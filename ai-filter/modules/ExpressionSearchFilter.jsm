@@ -97,7 +97,7 @@ class ClassificationTerm extends CustomerTermBase {
 
   needsBody() { return true; }
 
-  async match(msgHdr, value, op) {
+  match(msgHdr, value, op) {
     const opName = op === Ci.nsMsgSearchOp.Matches ? "matches" :
                    op === Ci.nsMsgSearchOp.DoesntMatch ? "doesn't match" : `unknown (${op})`;
     console.log(`[ai-filter][ExpressionSearchFilter] Matching message ${msgHdr.messageId} using op "${opName}" and value "${value}"`);
@@ -129,16 +129,15 @@ class ClassificationTerm extends CustomerTermBase {
 
     let matched = false;
     try {
-      const res = await fetch(gEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: payload
-      });
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", gEndpoint, false); // synchronous request
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.send(payload);
 
-      if (!res.ok) {
-        console.warn(`[ai-filter][ExpressionSearchFilter] HTTP status ${res.status}`);
+      if (xhr.status < 200 || xhr.status >= 300) {
+        console.warn(`[ai-filter][ExpressionSearchFilter] HTTP status ${xhr.status}`);
       } else {
-        const result = await res.json();
+        const result = JSON.parse(xhr.responseText);
         const rawText = result.choices?.[0]?.text || "";
         const cleanedText = rawText.replace(/<think>[\s\S]*?<\/think>/gi, "").trim();
         const obj = JSON.parse(cleanedText);

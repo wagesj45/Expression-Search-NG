@@ -32,7 +32,7 @@ console.log("[ai-filter] background.js loaded – ready to classify");
 })();
 
 // Listen for messages from UI/devtools
-browser.runtime.onMessage.addListener(async (msg) => {
+browser.runtime.onMessage.addListener((msg) => {
     console.log("[ai-filter] onMessage received:", msg);
 
     if (msg?.type === "aiFilter:test") {
@@ -42,7 +42,7 @@ browser.runtime.onMessage.addListener(async (msg) => {
 
         try {
             console.log("[ai-filter] Calling browser.aiFilter.classify()");
-            const result = await browser.aiFilter.classify(text, criterion);
+            const result = browser.aiFilter.classify(text, criterion);
             console.log("[ai-filter] classify() returned:", result);
             return { match: result };
         }

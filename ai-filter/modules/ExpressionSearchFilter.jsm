@@ -97,7 +97,7 @@ class ClassificationTerm extends CustomerTermBase {
 
   needsBody() { return true; }
 
-  match(msgHdr, value, op) {
+  async match(msgHdr, value, op) {
     const opName = op === Ci.nsMsgSearchOp.Matches ? "matches" :
                    op === Ci.nsMsgSearchOp.DoesntMatch ? "doesn't match" : `unknown (${op})`;
     console.log(`[ai-filter][ExpressionSearchFilter] Matching message ${msgHdr.messageId} using op "${opName}" and value "${value}"`);
@@ -115,27 +115,23 @@ class ClassificationTerm extends CustomerTermBase {
 
     console.log(`[ai-filter][ExpressionSearchFilter] Sending classification request to ${gEndpoint}`);
 
-    let xhr = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance(Ci.nsIXMLHttpRequest);
-    xhr.open("POST", gEndpoint, false);
-    xhr.setRequestHeader("Content-Type", "application/json");
-
     let matched = false;
     try {
-      xhr.send(payload);
-    } catch (e) {
-      console.error(`[ai-filter][ExpressionSearchFilter] HTTP request failed:`, e);
-    }
+      const res = await fetch(gEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload
+      });
 
-    if (xhr.status === 200) {
-      try {
-        const result = JSON.parse(xhr.responseText);
+      if (!res.ok) {
+        console.warn(`[ai-filter][ExpressionSearchFilter] HTTP status ${res.status}`);
+      } else {
+        const result = await res.json();
         matched = result.match === true;
         console.log(`[ai-filter][ExpressionSearchFilter] Received response:`, result);
-      } catch (e) {
-        console.error(`[ai-filter][ExpressionSearchFilter] Failed to parse response: ${xhr.responseText}`);
       }
-    } else {
-      console.warn(`[ai-filter][ExpressionSearchFilter] HTTP status ${xhr.status}`);
+    } catch (e) {
+      console.error(`[ai-filter][ExpressionSearchFilter] HTTP request failed:`, e);
     }
 
     if (op === Ci.nsMsgSearchOp.DoesntMatch) {

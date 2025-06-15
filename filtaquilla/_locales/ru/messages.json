@@ -1,0 +1,385 @@
+{
+  "aboutAndSupport": {
+    "message": "О FiltaQuilla / Помощь"
+  },
+  "applyIncomingMails": {
+    "message": "Применять фильтры к входящим письмам"
+  },
+  "checkJavascriptActionBodyEnabled.accesskey": {
+    "message": "Y"
+  },
+  "checkJavascriptActionBodyEnabled.label": {
+    "message": "Javascript действие с телом письма"
+  },
+  "checkJavascriptEnabled.accesskey": {
+    "message": "J"
+  },
+  "checkJavascriptEnabled.label": {
+    "message": "Javascript"
+  },
+  "default": {
+    "message": "Использовать умолчания"
+  },
+  "editJavascript": {
+    "message": "Редактировать Javascript"
+  },
+  "enabled": {
+    "message": "Включено"
+  },
+  "extensionDescription": {
+    "description": "Description of the extension.",
+    "message": "Быстро создавайте правила фильтрации почты на лету, перетаскивая письма и анализируя их атрибуты."
+  },
+  "extensionName": {
+    "description": "Имя расширения.",
+    "message": "FiltaQuilla"
+  },
+  "extensions.filtaquilla.description": {
+    "message": "Почтовый фильтр пользовательских действий"
+  },
+  "filtaquilla.applyIncomingFilters": {
+    "message": "Применить входящие фильтры"
+  },
+  "filtaquilla.applyIncomingFilters.accesskey": {
+    "message": "F"
+  },
+  "filtaquilla.editJavascript": {
+    "message": "Редактировать JavaScript…"
+  },
+  "filtaquilla.enabled": {
+    "message": "Включено"
+  },
+  "filtaquilla.filters": {
+    "message": "Фильтры"
+  },
+  "filtaquilla.inherit": {
+    "message": "Унаследованное"
+  },
+  "filtaquilla.javascriptAction.name": {
+    "message": "Javascript действие"
+  },
+  "filtaquilla.javascriptActionBody.name": {
+    "message": "Javascript действие с телом сообщения"
+  },
+  "filtaquilla.launcher.launch": {
+    "message": "Запустить файл!"
+  },
+  "filtaquilla.launcher.select": {
+    "message": "Выберите файл…"
+  },
+  "filtaquilla.playSound": {
+    "message": "Проиграть звук"
+  },
+  "filtaquilla.runProgram.select": {
+    "message": "Выберите программу…"
+  },
+  "filtaquilla.runProgram.title": {
+    "message": "Выберите программу для запуска"
+  },
+  "filtaquilla.selectFolder.btn": {
+    "message": "Выбрать папку…"
+  },
+  "filtaquilla.selectFolder.title": {
+    "message": "Выберите папку"
+  },
+  "filtaquilla.tone.select": {
+    "message": "Выберите звуковой файл…"
+  },
+  "filterActions": {
+    "message": "Действия фильтра"
+  },
+  "fq.Bcc": {
+    "message": "Bcc"
+  },
+  "fq.Bcc.access": {
+    "message": "B"
+  },
+  "fq.addSender": {
+    "message": "Добавить отправителя в список адресов"
+  },
+  "fq.addSender.access": {
+    "message": "L"
+  },
+  "fq.attachmentRegex": {
+    "message": "Совпадение имени вложения с регэкспом"
+  },
+  "fq.bodyRegex": {
+    "message": "Соответствие Body Regexp"
+  },
+  "fq.copyAsRead": {
+    "message": "Копировать как прочитаннное"
+  },
+  "fq.copyAsRead.access": {
+    "message": "C"
+  },
+  "fq.detachAttachments": {
+    "message": "Отсоединить вложения в"
+  },
+  "fq.detachAttachments.access": {
+    "message": "D"
+  },
+  "fq.filtaquilla.mustSelectFolder": {
+    "message": "Выберите целевую папку"
+  },
+  "fq.fileNameMaxLength": {
+    "message": "максимальная длина"
+  },
+  "fq.fileNameSpaceCharacter": {
+    "message": "Замените пробелы в именах файлов на"
+  },
+  "fq.fileNameWhiteList": {
+    "message": "Письма из белого списка"
+  },
+  "fq.folderName": {
+    "message": "Имя папки"
+  },
+  "fq.folderName.access": {
+    "message": "F"
+  },
+  "fq.hdrRegex": {
+    "message": "Совпадение заголовка с регэкспом"
+  },
+  "fq.hdrRegex.access": {
+    "message": "H"
+  },
+  "fq.javascript": {
+    "message": "Javascript"
+  },
+  "fq.javascriptAction": {
+    "message": "Javascript Действие"
+  },
+  "fq.javascriptAction.access": {
+    "message": "V"
+  },
+  "fq.launchFile": {
+    "message": "Запустить файл"
+  },
+  "fq.launchFile.access": {
+    "message": "F"
+  },
+  "fq.markReplied": {
+    "message": "Пометить как отвеченное"
+  },
+  "fq.markReplied.access": {
+    "message": "E"
+  },
+  "fq.markUnread": {
+    "message": "Пометить как непрочитанное"
+  },
+  "fq.markUnread.access": {
+    "message": "M"
+  },
+  "fq.moveLater": {
+    "message": "Переместить позже"
+  },
+  "fq.moveLater.access": {
+    "message": "A"
+  },
+  "fq.nobiff": {
+    "message": "Не уведомлять"
+  },
+  "fq.nobiff.access": {
+    "message": "N"
+  },
+  "fq.print": {
+    "message": "Печать"
+  },
+  "fq.print.access": {
+    "message": "P"
+  },
+  "fq.printAllowDuplicates": {
+    "message": "Разрешить дубликаты"
+  },
+  "fq.printTools": {
+    "message": "Использует PrintingTools NG для печати"
+  },
+  "fq.regex.caseInsensitive": {
+    "message": "Регэксп совпадение без учета регистра"
+  },
+  "fq.regex.multilineanchors": {
+    "message": "Поддержка анкерных символов '^' и '$' в заголовках адресов,"
+  },
+  "fq.removeflagged": {
+    "message": "Удалить звездочку"
+  },
+  "fq.removeflagged.access": {
+    "message": "S"
+  },
+  "fq.removekeyword": {
+    "message": "Удалить тег"
+  },
+  "fq.removekeyword.access": {
+    "message": "O"
+  },
+  "fq.runFile": {
+    "message": "Запустить программу"
+  },
+  "fq.runFile.access": {
+    "message": "R"
+  },
+  "fq.runFile.unicode": {
+    "message": "UTF-16 по умолчанию"
+  },
+  "fq.runFile.unicode.tooltip": {
+    "message": "Используйте дополнительный параметр @UTF16@ или @UTF8@ для использования индивидуальной кодировки"
+  },
+  "fq.saveAttachment": {
+    "message": "Сохранить вложения в"
+  },
+  "fq.saveAttachment.access": {
+    "message": "H"
+  },
+  "fq.saveMsgAsFile": {
+    "message": "Сохранить сообщение как файл"
+  },
+  "fq.saveMsgAsFile.access": {
+    "message": "I"
+  },
+  "fq.archiveMessage": {
+    "message": "архив почты"
+  },
+  "fq.subjectBodyRegex": {
+    "message": "Регэксп для текста темы или письма"
+  },
+  "fq.subjectRegex": {
+    "message": "Совпадение темы с регэкспом"
+  },
+  "fq.subjectRegex.access": {
+    "message": "S"
+  },
+  "fq.subjectappend": {
+    "message": "Суффикс темы"
+  },
+  "fq.subjectappend.access": {
+    "message": "X"
+  },
+  "fq.subjectprepend": {
+    "message": "Приставка темы"
+  },
+  "fq.subjectprepend.access": {
+    "message": "U"
+  },
+  "fq.threadAnyTag": {
+    "message": "Тег - Сообщения нити"
+  },
+  "fq.threadAnyTag.access": {
+    "message": "T"
+  },
+  "fq.threadHeadTag": {
+    "message": "Тег - Заголовок нити"
+  },
+  "fq.threadHeadTag.access": {
+    "message": "D"
+  },
+  "fq.toneQuilla": {
+    "message": "Проиграть звук (Tonequilla)"
+  },
+  "fq.trainGood": {
+    "message": "Предположительно хорошее"
+  },
+  "fq.trainGood.access": {
+    "message": "G"
+  },
+  "fq.trainJunk": {
+    "message": "Предположительно спам"
+  },
+  "fq.trainJunk.access": {
+    "message": "J"
+  },
+  "helpFeatureTip": {
+    "message": "Показать детали этой фичи"
+  },
+  "indexInGlobalDatabase": {
+    "message": "Индекс в глобальной базе данных"
+  },
+  "inherit": {
+    "message": "Унаследованные"
+  },
+  "inheritedProperties": {
+    "message": "Унаследованные свойства"
+  },
+  "optionsIntro": {
+    "message": "Включите желаемые пункты для диалогового окна «Правила фильтра». Перезапустите после изменения."
+  },
+  "pane1.title": {
+    "message": "FiltaQuilla Настройки"
+  },
+  "prefPanel-inheritPane": {
+    "message": "Унаследованные свойства"
+  },
+  "prefwindow.title": {
+    "message": "FiltaQuilla настройки"
+  },
+  "purchase-a-license": {
+    "message": "Купите лицензию."
+  },
+  "purchase-heading": {
+    "message": "Покупка лицензии!"
+  },
+  "quickFiltersPage": {
+    "message": "Получить quickFilters!"
+  },
+  "quickFiltersPage_desc": {
+    "message": "Загрузите это дополнение - турбо-зарядка фильтрации. quickFilters делают управление фильтрацией невероятно лёгким."
+  },
+  "regex.accept": {
+    "message": "Принять"
+  },
+  "regex.btnBuilder.tooltip": {
+    "message": "Нажмите здесь, чтобы протестировать ваше регулярное выражение"
+  },
+  "regex.cancel": {
+    "message": "Отмена"
+  },
+  "regex.collapseWhiteSpace": {
+    "message": "убрать все пробелы"
+  },
+  "regex.contentfilter": {
+    "message": "Ограничения контента:"
+  },
+  "regex.content.plaintext": {
+    "message": "обработать текстовые части"
+  },
+  "regex.content.html": {
+    "message": "обработать HTML-части"
+  },
+  "regex.content.vcard": {
+    "message": "обработать части vCard"
+  },
+  "regex.exclude.html": {
+    "message": "исключить все HTML-теги"
+  },
+  "regex.exclude.quotes": {
+    "message": "исключить цитаты (HTML+обычный текст)"
+  },
+  "regex.exclude.style": {
+    "message": "исключить глобальные &lt;style&gt;-теги и CSS"
+  },
+  "regex.expression": {
+    "message": "Регулярное выражение"
+  },
+  "regex.popup": {
+    "message": "Параметры поиска…"
+  },
+  "regex.raw.help": {
+    "message": "FiltaQuilla по умолчанию обрабатывает текстовые части, объединяя все абзацы, то есть удаляя разрывы строк, вызванные перенаправлением текста. Это также удалит конечные кавычки {>} внутри абзаца. Активируйте эту опцию, если хотите искать в необработанном сообщении."
+  },
+  "regex.switches": {
+    "message": "Переключатели поиска"
+  },
+  "searchTerms": {
+    "message": "Темины поиска"
+  },
+  "supportFiltaquilla": {
+    "message": "Поддержать FiltaQuilla"
+  },
+  "supportFiltaquilla_desc": {
+    "message": "FiltaQuilla БЕСПЛАТНО для скачивания и использования - лучший способ поддержать команду разработки, купить лицензию на quickFilters Pro. Это удивительно удобные расширения для управления фильтрацией."
+  },
+  "supportPage": {
+    "message": "Посетить страницу поддержки"
+  },
+  "supportPage_desc": {
+    "message": "Эта страница описывает различные действия и условия, которые вы можете добавить к почтовым фильтрам с FiltaQuilla."
+  }
+}

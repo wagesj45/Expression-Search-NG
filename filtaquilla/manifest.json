@@ -1,0 +1,74 @@
+﻿{
+  "manifest_version" : 2,
+  "name" : "FiltaQuilla",
+  "description" : "Mail filter custom actions and searches",
+  "version" : "5.3pre20",
+  "default_locale": "en",
+  "author" : "R Kent James, Axel Grude",
+  "developer" : {
+      "name" : "Axel Grude",
+      "url" : "https://quickfilters.quickfolders.org/filtaquilla.html"
+  },
+  "applications" : {
+      "gecko" : {
+          "id" : "filtaquilla@mesquilla.com",
+          "strict_min_version" : "128.0",
+          "strict_max_version" : "140.*"
+      }
+  },
+  "icons" : {
+      "32" : "skin/filtaquilla-32.png",
+      "64" : "skin/filtaquilla-64.png"
+  },
+  "background": {
+    "page": "filtaquilla-background.html"
+  } ,
+  "permissions": [
+    "messagesRead",
+    "notifications",
+    "tabs"
+  ],  
+  "experiment_apis": {
+    "FiltaQuilla": {
+      "schema": "content/api/FiltaQuilla/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["FiltaQuilla"]],
+        "script": "content/api/FiltaQuilla/implementation.js"
+      }
+    },
+    "WindowListener": {
+      "schema": "content/api/WindowListener/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["WindowListener"]],
+        "script": "content/api/WindowListener/implementation.js"
+      }
+    },
+    "NotifyTools": {
+      "schema": "content/api/NotifyTools/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["NotifyTools"]],
+        "script": "content/api/NotifyTools/implementation.js",
+        "events": ["startup"]
+      }
+    },
+    "LegacyPrefs": {
+      "schema": "content/api/LegacyPrefs/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["LegacyPrefs"]],
+        "script": "content/api/LegacyPrefs/implementation.js"
+      }
+    },
+    "DomContentScript": {
+      "schema": "content/api/DomContentScript/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["DomContentScript"]],
+        "script": "content/api/DomContentScript/implementation.js"
+      }
+    }
+  }    
+}

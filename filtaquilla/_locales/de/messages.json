@@ -1,0 +1,394 @@
+{
+  "aboutAndSupport": {
+    "message": "Über FiltaQuilla / Hilfe"
+  },
+  "applyIncomingMails": {
+    "message": "Filter für eingehende E-Mails ausführen"
+  },
+  "checkJavascriptActionBodyEnabled.accesskey": {
+    "message": "Y"
+  },
+  "checkJavascriptActionBodyEnabled.label": {
+    "message": "Javascript Aktion (mit body)"
+  },
+  "checkJavascriptEnabled.accesskey": {
+    "message": "J"
+  },
+  "checkJavascriptEnabled.label": {
+    "message": "JavaScript"
+  },
+  "default": {
+    "message": "Standardeinstellung"
+  },
+  "editJavascript": {
+    "message": "Javascript editieren"
+  },
+  "enabled": {
+    "message": "Aktiv"
+  },
+  "extensionDescription": {
+    "description": "Description of the extension.",
+    "message": "Auf die Schnelle neue Filter erzeugen, einfach während man Email in Verzeichnisse einordnet. Filter in weniger als 10 Sekunden erzeugen. Mehrere Filter zusammenführen, und auf andere Konten übertragen."
+  },
+  "extensionName": {
+    "description": "Name of the extension.",
+    "message": "FiltaQuilla"
+  },
+  "extensions.filtaquilla.description": {
+    "message": "Benutzerdefinierte Aktionen für Mailfilter"
+  },
+  "filtaquilla.applyIncomingFilters": {
+    "message": "Eingehende Filter ausführen"
+  },
+  "filtaquilla.applyIncomingFilters.accesskey": {
+    "message": "F"
+  },
+  "filtaquilla.editJavascript": {
+    "message": "JavaScript editieren…"
+  },
+  "filtaquilla.enabled": {
+    "message": "Aktiv"
+  },
+  "filtaquilla.filters": {
+    "message": "Filter"
+  },
+  "filtaquilla.inherit": {
+    "message": "Übernehmen"
+  },
+  "filtaquilla.javascriptAction.name": {
+    "message": "JavaScript Aktion"
+  },
+  "filtaquilla.javascriptActionBody.name": {
+    "message": "JavaScript Aktion (mit body)"
+  },
+  "filtaquilla.launcher.launch": {
+    "message": "Datei ausführen!"
+  },
+  "filtaquilla.launcher.select": {
+    "message": "Datei auswählen…"
+  },
+  "filtaquilla.playSound": {
+    "message": "Klang abspielen"
+  },
+  "filtaquilla.runProgram.select": {
+    "message": "Programm auswählen…"
+  },
+  "filtaquilla.runProgram.title": {
+    "message": "Wählen Sie ein Programm das ausgeführt werden soll"
+  },
+  "filtaquilla.selectFolder.btn": {
+    "message": "Verzeichnis wählen…"
+  },
+  "filtaquilla.selectFolder.title": {
+    "message": "Verzeichnis auswählen"
+  },
+  "filtaquilla.template.select": {
+    "message": "SmartTemplate wählen…"
+  },
+  "filtaquilla.tone.select": {
+    "message": "Klangdatei auswählen…"
+  },
+  "filterActions": {
+    "message": "Filter Aktionen"
+  },
+  "fq.Bcc": {
+    "message": "Blindkopie (Bcc)"
+  },
+  "fq.Bcc.access": {
+    "message": "B"
+  },
+  "fq.addSender": {
+    "message": "Absender zu Liste hinzufügen"
+  },
+  "fq.addSender.access": {
+    "message": "L"
+  },
+  "fq.attachmentRegex": {
+    "message": "Anhangs-Namen vergleichen (Regulärer Ausdruck)"
+  },
+  "fq.bodyRegex": {
+    "message": "Body Regulärer Ausdruck"
+  },
+  "fq.copyAsRead": {
+    "message": "Gelesene Kopie erstellen"
+  },
+  "fq.copyAsRead.access": {
+    "message": "K"
+  },
+  "fq.detachAttachments": {
+    "message": "Anhänge abtrennen nach"
+  },
+  "fq.detachAttachments.access": {
+    "message": "B"
+  },
+  "fq.filtaquilla.mustSelectFolder": {
+    "message": "Bitte ein Verzeichnis auswählen"
+  },
+  "fq.fileNameMaxLength": {
+    "message": "Maximale Länge"
+  },
+  "fq.fileNameSpaceCharacter": {
+    "message": "Ersetzen von Leerzeichen in Dateinamen durch"
+  },
+  "fq.fileNameWhiteList": {
+    "message": "Erlaubte Buchstaben"
+  },
+  "fq.folderName": {
+    "message": "Verzeichnisname"
+  },
+  "fq.folderName.access": {
+    "message": "V"
+  },
+  "fq.hdrRegex": {
+    "message": "Header vergleichen (Regulärer Ausdruck)"
+  },
+  "fq.hdrRegex.access": {
+    "message": "R"
+  },
+  "fq.javascript": {
+    "message": "JavaScript"
+  },
+  "fq.javascriptAction": {
+    "message": "Javascript Aktion"
+  },
+  "fq.javascriptAction.access": {
+    "message": "J"
+  },
+  "fq.launchFile": {
+    "message": "Datei ausführen"
+  },
+  "fq.launchFile.access": {
+    "message": "F"
+  },
+  "fq.markReplied": {
+    "message": "Als gelesen markieren"
+  },
+  "fq.markReplied.access": {
+    "message": "M"
+  },
+  "fq.markUnread": {
+    "message": "Als ungelesen markieren"
+  },
+  "fq.markUnread.access": {
+    "message": "U"
+  },
+  "fq.moveLater": {
+    "message": "Später verschieben"
+  },
+  "fq.moveLater.access": {
+    "message": "S"
+  },
+  "fq.nobiff": {
+    "message": "Nicht benachrichtigen"
+  },
+  "fq.nobiff.access": {
+    "message": "N"
+  },
+  "fq.print": {
+    "message": "Ausdrucken"
+  },
+  "fq.print.access": {
+    "message": "K"
+  },
+  "fq.printAllowDuplicates": {
+    "message": "Duplikate zulassen"
+  },
+  "fq.printTools": {
+    "message": "Verwendet PrintingTools NG zum Drucken"
+  },
+  "fq.regex.caseInsensitive": {
+    "message": "Regulärer Ausdruck ohne Beachtung der Groß-/Kleinschreibung"
+  },
+  "fq.regex.multilineanchors": {
+    "message": "Unterstützung für Anker-Tokens '^' und '$' bei Adressheadern,"
+  },
+  "fq.removeflagged": {
+    "message": "Stern entfernen"
+  },
+  "fq.removeflagged.access": {
+    "message": "S"
+  },
+  "fq.removekeyword": {
+    "message": "Schlagwort entfernen"
+  },
+  "fq.removekeyword.access": {
+    "message": "w"
+  },
+  "fq.runFile": {
+    "message": "Programm ausführen"
+  },
+  "fq.runFile.access": {
+    "message": "R"
+  },
+  "fq.runFile.unicode": {
+    "message": "UTF-16 als Standard verwenden"
+  },
+  "fq.runFile.unicode.tooltip": {
+    "message": "Verwenden Sie den zusätzlichen Parameter @UTF16@ oder @UTF8@, um eine individuelle Codierung zu verwenden"
+  },
+  "fq.saveAttachment": {
+    "message": "Anhänge abspeichern in"
+  },
+  "fq.saveAttachment.access": {
+    "message": "A"
+  },
+  "fq.saveMsgAsFile": {
+    "message": "Mail als Datei abspeichern"
+  },
+  "fq.saveMsgAsFile.access": {
+    "message": "D"
+  },
+  "fq.smartTemplate.fwd": {
+    "message": "Mit SmartTemplates weiterleiten"
+  },
+  "fq.smartTemplate.rsp": {
+    "message": "Mit SmartTemplates beantworten"
+  },
+  "fq.archiveMessage": {
+    "message": "Mail archivieren"
+  },
+  "fq.subjectBodyRegex": {
+    "message": "Betreff oder Inhalt (Regulärer Ausdruck)"
+  },
+  "fq.subjectRegex": {
+    "message": "Betreff vergleichen (Regulärer Ausdruck)"
+  },
+  "fq.subjectRegex.access": {
+    "message": "V"
+  },
+  "fq.subjectappend": {
+    "message": "Betreff Postfix"
+  },
+  "fq.subjectappend.access": {
+    "message": "O"
+  },
+  "fq.subjectprepend": {
+    "message": "Betreff Präfix"
+  },
+  "fq.subjectprepend.access": {
+    "message": "X"
+  },
+  "fq.threadAnyTag": {
+    "message": "Schlagwort aller Mails der Unterhaltung"
+  },
+  "fq.threadAnyTag.access": {
+    "message": "T"
+  },
+  "fq.threadHeadTag": {
+    "message": "Schlagwort der Ersten Mail der Unterhaltung"
+  },
+  "fq.threadHeadTag.access": {
+    "message": "U"
+  },
+  "fq.toneQuilla": {
+    "message": "Klang abspielen (Tonequilla)"
+  },
+  "fq.trainGood": {
+    "message": "Als kein Junk kategorisieren"
+  },
+  "fq.trainGood.access": {
+    "message": "N"
+  },
+  "fq.trainJunk": {
+    "message": "Als Junk markieren"
+  },
+  "fq.trainJunk.access": {
+    "message": "J"
+  },
+  "helpFeatureTip": {
+    "message": "Mehr Informationen über diese Funktion"
+  },
+  "indexInGlobalDatabase": {
+    "message": "In Globaler Datenbank indizieren (GLODA)"
+  },
+  "inherit": {
+    "message": "Übernehmen"
+  },
+  "inheritedProperties": {
+    "message": "Übernommene Eigenschaften"
+  },
+  "optionsIntro": {
+    "message": "Aktivieren Sie alle Einträge die im 'Filter bearbeiten' Dialog angeboten werden sollen. Neustart erforderlich."
+  },
+  "pane1.title": {
+    "message": "Einstellungen für FiltaQuilla"
+  },
+  "prefPanel-inheritPane": {
+    "message": "Übernommene Eigenschaften"
+  },
+  "prefwindow.title": {
+    "message": "Einstellungen für FiltaQuilla"
+  },
+  "purchase-a-license": {
+    "message": "Kaufen Sie eine Lizenz."
+  },
+  "purchase-heading": {
+    "message": "Lizenz erwerben!"
+  },
+  "quickFiltersPage": {
+    "message": "Holen Sie sich quickFilters!"
+  },
+  "quickFiltersPage_desc": {
+    "message": "Laden Sie dieses fantastische Add-on um Ihre Filterregeln aufzufrisieren. quickFilters macht Filter Definition und Management zum Kinderspiel."
+  },
+  "regex.accept": {
+    "message": "Akzeptieren"
+  },
+  "regex.btnBuilder.tooltip": {
+    "message": "Klicken Sie hier, um Ihren regulären Ausdruck zu testen"
+  },
+  "regex.cancel": {
+    "message": "Abbrechen"
+  },
+  "regex.collapseWhiteSpace": {
+    "message": "alle Leerzeichen zusammenfassen"
+  },
+  "regex.contentfilter": {
+    "message": "Inhaltsbeschränkungen:"
+  },
+  "regex.content.plaintext": {
+    "message": "Nur-Text-Teile verarbeiten"
+  },
+  "regex.content.html": {
+    "message": "HTML-Teile verarbeiten"
+  },
+  "regex.content.vcard": {
+    "message": "vCard-Teile verarbeiten"
+  },
+  "regex.exclude.html": {
+    "message": "alle HTML-Tags ausschließen"
+  },
+  "regex.exclude.quotes": {
+    "message": "Zitate ausschließen (HTML+Nur-Text)"
+  },
+  "regex.exclude.style": {
+    "message": "Globale &lt;style&gt;-Tags und CSS ausschließen"
+  },
+  "regex.expression": {
+    "message": "Regulärer Ausdruck"
+  },
+  "regex.popup": {
+    "message": "Suchoptionen…"
+  },
+  "regex.raw.help": {
+    "message": "FiltaQuilla verarbeitet standardmäßig Klartextteile, indem alle Absätze zusammengeführt werden, d. h. Zeilenumbrüche entfernt werden, die durch den Zeilenumbruch verursacht wurden. Dadurch werden auch nachfolgende Anführungszeichen {>} innerhalb eines Absatzes entfernt. Aktivieren Sie diese Option, wenn Sie die unverarbeitete Nachricht durchsuchen möchten."
+  },
+  "regex.switches": {
+    "message": "Suchschalter"
+  },
+  "searchTerms": {
+    "message": "Suchbegriffe"
+  },
+  "supportFiltaquilla": {
+    "message": "FiltaQuilla unterstützen"
+  },
+  "supportFiltaquilla_desc": {
+    "message": "FiltaQuilla kann kostenlos heruntergeladen und verwendet werden. Der beste Weg, das Entwicklungsteam zu unterstützen, ist der Kauf einer Lizenz für quickFilters Pro. Es ist die beeindruckendste Filtererweiterung für die Verwaltung und Erstellung von Filtern auf äußerst praktische Weise."
+  },
+  "supportPage": {
+    "message": "Support Seite besuchen"
+  },
+  "supportPage_desc": {
+    "message": "Diese Seite beschreibt die verschiedenen Aktionen und Suchbedingungen die man mit FiltaQuilla zu den Filterregeln hinzufügen kann."
+  }
+}

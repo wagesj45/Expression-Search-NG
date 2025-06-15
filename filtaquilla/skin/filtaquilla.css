@@ -1,0 +1,87 @@
+
+.ruleactiontarget[type="filtaquilla@mesquilla.com#launchFile"],
+.ruleactiontarget[type="filtaquilla@mesquilla.com#runFile"],
+.ruleactiontarget[type="filtaquilla@mesquilla.com#addSender"],
+.ruleactiontarget[type="filtaquilla@mesquilla.com#saveAttachment"] ,
+.ruleactiontarget[type="filtaquilla@mesquilla.com#detachAttachments"] ,
+.ruleactiontarget[type="filtaquilla@mesquilla.com#javascriptAction"] ,
+.ruleactiontarget[type="filtaquilla@mesquilla.com#javascriptActionBody"] ,
+.ruleactiontarget[type="filtaquilla@mesquilla.com#saveMessageAsFile"] {
+  flex-grow: 2;
+  /* -moz-box-flex: 1;  */
+}
+
+filtaquilla-ruleactiontarget-runpicker toolbarbutton,
+filtaquilla-ruleactiontarget-launchpicker toolbarbutton,
+filtaquilla-ruleactiontarget-directorypicker toolbarbutton,
+filtaquilla-ruleactiontarget-tonequillapicker toolbarbutton,
+filtaquilla-ruleactiontarget-templatepicker toolbarbutton {
+  -moz-context-properties: fill;
+  fill: currentColor;  
+}
+
+toolbarbutton.focusbutton {
+  -moz-user-focus: normal;
+}
+
+/* style the file picker + textbox elements so that the textbox stretches */
+hbox.flexelementcontainer {
+  display: inline-flex !important;
+  width: -moz-available;
+}
+hbox.flexelementcontainer[hidden] {
+  display: none !important;
+}
+
+input.flexinput,
+menulist.flexinput {
+  flex-grow: 2 !important;
+}
+
+
+.ruleactionitem.filtaquillaAB menuitem {
+  list-style-image: url("chrome://messenger/skin/icons/address.svg");
+  opacity: 0.75 !important;
+}
+
+.ruleactionitem.filtaquillaAB menuitem.mailing-list {
+  list-style-image: url("chrome://messenger/skin/icons/ablist.svg");
+  opacity: 1.0;
+}
+
+.ruleactionitem.filtaquillaAB menuitem.is-remote {
+  list-style-image: url("chrome://messenger/skin/icons/globe.svg");
+  opacity: 1.0;
+}
+
+.ruleactionitem.filtaquillaAB menuitem.is-remote.is-secure {
+  list-style-image: url("chrome://messenger/skin/icons/globe-secure.svg");
+  opacity: 1.0;
+}
+
+/* textboxes */
+.search-value-custom[searchAttribute="filtaquilla@mesquilla.com#attachmentRegex"],
+.search-value-custom[searchAttribute="filtaquilla@mesquilla.com#headerRegex"],
+.search-value-custom[searchAttribute="filtaquilla@mesquilla.com#searchBcc"],
+.search-value-custom[searchAttribute="filtaquilla@mesquilla.com#folderName"],
+.search-value-custom[searchAttribute="filtaquilla@mesquilla.com#subjectRegex"],
+.search-value-custom[searchAttribute="filtaquilla@mesquilla.com#threadheadtag"],
+.search-value-custom[searchAttribute="filtaquilla@mesquilla.com#threadanytag"] {
+  /* -moz-box-flex: 1; */
+  flex-grow: 2;
+}
+
+.filtaquilla_help {
+  list-style-image: url("resource://filtaquilla-skin/help.svg");
+}
+.filtaquilla_build {
+  list-style-image: url("resource://filtaquilla-skin/pencil.svg");
+}
+.filtaquilla_play {
+  list-style-image: url("resource://filtaquilla-skin/media-play.svg");
+}
+
+/* push down the text */
+.filtaquilla_topinput {
+  align-items: end;
+}

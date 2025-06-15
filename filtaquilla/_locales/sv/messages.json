@@ -1,0 +1,382 @@
+{
+  "aboutAndSupport": {
+    "message": "Om FiltaQuilla / Hjälp"
+  },
+  "applyIncomingMails": {
+    "message": "Kör filter på inkommande e-post"
+  },
+  "checkJavascriptActionBodyEnabled.accesskey": {
+    "message": "c"
+  },
+  "checkJavascriptActionBodyEnabled.label": {
+    "message": "JavaScript-åtgärd med innehållstext"
+  },
+  "checkJavascriptEnabled.accesskey": {
+    "message": "J"
+  },
+  "checkJavascriptEnabled.label": {
+    "message": "JavaScript"
+  },
+  "default": {
+    "message": "Använd standardvärden"
+  },
+  "editJavascript": {
+    "message": "Redigera JavaScript"
+  },
+  "enabled": {
+    "message": "Aktiverad"
+  },
+  "extensionDescription": {
+    "description": "Description of the extension.",
+    "message": "Generera snabbt e-postfilterregler direkt, genom att dra och släppa mejl och analysera deras attribut."
+  },
+  "extensionName": {
+    "description": "Name of the extension.",
+    "message": "FiltaQuilla"
+  },
+  "extensions.filtaquilla.description": {
+    "message": "E-postfiltrerande anpassade åtgärder"
+  },
+  "filtaquilla.applyIncomingFilters": {
+    "message": "Tillämpa filter för inkommande"
+  },
+  "filtaquilla.applyIncomingFilters.accesskey": {
+    "message": "f"
+  },
+  "filtaquilla.editJavascript": {
+    "message": "Redigera JavaScript…"
+  },
+  "filtaquilla.enabled": {
+    "message": "Aktiverad"
+  },
+  "filtaquilla.filters": {
+    "message": "Filter"
+  },
+  "filtaquilla.inherit": {
+    "message": "Ärv"
+  },
+  "filtaquilla.javascriptAction.name": {
+    "message": "JavaScript-åtgärd"
+  },
+  "filtaquilla.javascriptActionBody.name": {
+    "message": "JavaScript-åtgärd med innehållstext"
+  },
+  "filtaquilla.launcher.launch": {
+    "message": "Starta filen!"
+  },
+  "filtaquilla.launcher.select": {
+    "message": "Välj en fil…"
+  },
+  "filtaquilla.playSound": {
+    "message": "Spela ljud"
+  },
+  "filtaquilla.runProgram.select": {
+    "message": "Välj ett program…"
+  },
+  "filtaquilla.runProgram.title": {
+    "message": "Välj ett program att utföra"
+  },
+  "filtaquilla.selectFolder.btn": {
+    "message": "Välj mapp…"
+  },
+  "filtaquilla.selectFolder.title": {
+    "message": "Välj en mapp"
+  },
+  "filtaquilla.tone.select": {
+    "message": "Välj en ljudfil…"
+  },
+  "filterActions": {
+    "message": "Filtreringsåtgärder"
+  },
+  "fq.Bcc": {
+    "message": "Hemlig kopia"
+  },
+  "fq.Bcc.access": {
+    "message": "H"
+  },
+  "fq.addSender": {
+    "message": "Lägg till avsändare i adresslistan"
+  },
+  "fq.addSender.access": {
+    "message": "v"
+  },
+  "fq.attachmentRegex": {
+    "message": "Regexmatchning i bilagans namn"
+  },
+  "fq.bodyRegex": {
+    "message": "Body Regexp-matchning"
+  },
+  "fq.copyAsRead": {
+    "message": "Kopiera som läst"
+  },
+  "fq.copyAsRead.access": {
+    "message": "K"
+  },
+  "fq.detachAttachments": {
+    "message": "Flytta bifogade filer till"
+  },
+  "fq.detachAttachments.access": {
+    "message": "F"
+  },
+  "fq.filtaquilla.mustSelectFolder": {
+    "message": "Du måste markera en målmapp"
+  },
+  "fq.fileNameMaxLength": {
+    "message": "Maximal längd"
+  },
+  "fq.fileNameSpaceCharacter": {
+    "message": "Ersätt mellanslag i filnamn med"
+  },
+  "fq.folderName": {
+    "message": "Mappnamn"
+  },
+  "fq.folderName.access": {
+    "message": "M"
+  },
+  "fq.hdrRegex": {
+    "message": "Regex-matchning i sidhuvudet"
+  },
+  "fq.hdrRegex.access": {
+    "message": "m"
+  },
+  "fq.javascript": {
+    "message": "JavaScript"
+  },
+  "fq.javascriptAction": {
+    "message": "JavaScript-åtgärd"
+  },
+  "fq.javascriptAction.access": {
+    "message": "v"
+  },
+  "fq.launchFile": {
+    "message": "Kör fil"
+  },
+  "fq.launchFile.access": {
+    "message": "f"
+  },
+  "fq.markReplied": {
+    "message": "Markera som besvarad"
+  },
+  "fq.markReplied.access": {
+    "message": "b"
+  },
+  "fq.markUnread": {
+    "message": "Markera som oläst"
+  },
+  "fq.markUnread.access": {
+    "message": "k"
+  },
+  "fq.moveLater": {
+    "message": "Flytta senare"
+  },
+  "fq.moveLater.access": {
+    "message": "a"
+  },
+  "fq.nobiff": {
+    "message": "Avisera inte"
+  },
+  "fq.nobiff.access": {
+    "message": "n"
+  },
+  "fq.print": {
+    "message": "Skriv ut"
+  },
+  "fq.print.access": {
+    "message": "u"
+  },
+  "fq.printAllowDuplicates": {
+    "message": "Tillåt dubbletter"
+  },
+  "fq.printTools": {
+    "message": "Använder PrintingTools NG för utskrift"
+  },
+  "fq.regex.caseInsensitive": {
+    "message": "Regex skiftlägeskänslig Match"
+  },
+  "fq.regex.multilineanchors": {
+    "message": "Stöd för ankartoken '^' och '$' i adressrubriker,"
+  },
+  "fq.removeflagged": {
+    "message": "Ta bort stjärna"
+  },
+  "fq.removeflagged.access": {
+    "message": "j"
+  },
+  "fq.removekeyword": {
+    "message": "Ta bort tag"
+  },
+  "fq.removekeyword.access": {
+    "message": "b"
+  },
+  "fq.runFile": {
+    "message": "Kör program"
+  },
+  "fq.runFile.access": {
+    "message": "k"
+  },
+  "fq.runFile.unicode": {
+    "message": "UTF-16 som standard"
+  },
+  "fq.runFile.unicode.tooltip": {
+    "message": "Använd tilläggsparametern @UTF16@ eller @UTF8@ för att använda individuell kodning"
+  },
+  "fq.saveAttachment": {
+    "message": "Spara bifogade filer till"
+  },
+  "fq.saveAttachment.access": {
+    "message": "p"
+  },
+  "fq.saveMsgAsFile": {
+    "message": "Spara meddelande som fil"
+  },
+  "fq.saveMsgAsFile.access": {
+    "message": "m"
+  },
+  "fq.archiveMessage": {
+    "message": "arkivpost"
+  },
+  "fq.subjectBodyRegex": {
+    "message": "Regeluttryck för ämne eller e -posttext"
+  },
+  "fq.subjectRegex": {
+    "message": "Regex-matchning i ämnet"
+  },
+  "fq.subjectRegex.access": {
+    "message": "ä"
+  },
+  "fq.subjectappend": {
+    "message": "Lägg till i ämnets slut"
+  },
+  "fq.subjectappend.access": {
+    "message": "s"
+  },
+  "fq.subjectprepend": {
+    "message": "Lägg till i ämnets början"
+  },
+  "fq.subjectprepend.access": {
+    "message": "l"
+  },
+  "fq.threadAnyTag": {
+    "message": "Tagg för trådmeddelanden"
+  },
+  "fq.threadAnyTag.access": {
+    "message": "m"
+  },
+  "fq.threadHeadTag": {
+    "message": "Tagg för trådsidhuvudet"
+  },
+  "fq.threadHeadTag.access": {
+    "message": "s"
+  },
+  "fq.toneQuilla": {
+    "message": "Spela ljud (Tonequilla)"
+  },
+  "fq.trainGood": {
+    "message": "Träna som bra"
+  },
+  "fq.trainGood.access": {
+    "message": "b"
+  },
+  "fq.trainJunk": {
+    "message": "Träna som skräp"
+  },
+  "fq.trainJunk.access": {
+    "message": "ä"
+  },
+  "helpFeatureTip": {
+    "message": "Visa detaljer om denna funktion"
+  },
+  "indexInGlobalDatabase": {
+    "message": "Index i global databas"
+  },
+  "inherit": {
+    "message": "Ärv"
+  },
+  "inheritedProperties": {
+    "message": "Ärvda egenskaper"
+  },
+  "optionsIntro": {
+    "message": "Aktivera alla elemet du vill ha tillgängliga i dialogruan &quot;Filtreringsregler&quot;. Starta om efter ändringar."
+  },
+  "pane1.title": {
+    "message": "Alternativ för FiltaQuilla"
+  },
+  "prefPanel-inheritPane": {
+    "message": "Ärvda egenskaper"
+  },
+  "prefwindow.title": {
+    "message": "Alternativ för FiltaQuilla"
+  },
+  "purchase-a-license": {
+    "message": "Köp en licens."
+  },
+  "purchase-heading": {
+    "message": "Att köpa en licens!"
+  },
+  "quickFiltersPage": {
+    "message": "Hämta quickFilters!"
+  },
+  "quickFiltersPage_desc": {
+    "message": "Ladda ned detta häftiga tillägg för att turboladda din filtrering. quickFilters förenklar filterdefinition och -hantering."
+  },
+  "regex.accept": {
+    "message": "Acceptera"
+  },
+  "regex.btnBuilder.tooltip": {
+    "message": "Klicka här för att testa ditt reguljära uttryck"
+  },
+  "regex.cancel": {
+    "message": "Avbryt"
+  },
+  "regex.collapseWhiteSpace": {
+    "message": "ta bort all vit yta"
+  },
+  "regex.contentfilter": {
+    "message": "Innehållsbegränsningar:"
+  },
+  "regex.content.plaintext": {
+    "message": "bearbeta textdelar"
+  },
+  "regex.content.html": {
+    "message": "bearbeta HTML-delar"
+  },
+  "regex.content.vcard": {
+    "message": "bearbeta vCard-delar"
+  },
+  "regex.exclude.html": {
+    "message": "uteslut alla HTML-taggar"
+  },
+  "regex.exclude.quotes": {
+    "message": "uteslut citat (html+ren text)"
+  },
+  "regex.exclude.style": {
+    "message": "uteslut globala &lt;style&gt;-taggar och CSS"
+  },
+  "regex.expression": {
+    "message": "Reguljärt uttryck"
+  },
+  "regex.popup": {
+    "message": "Sök alternativ…"
+  },
+  "regex.raw.help": {
+    "message": "FiltaQuilla bearbetar som standard ren text genom att slå ihop alla stycken, dvs. ta bort radbrytningar som orsakas av textflöde. Detta tar också bort citattecken {>} i slutet av ett stycke. Aktivera detta alternativ om du vill söka i det obehandlade meddelandet."
+  },
+  "regex.switches": {
+    "message": "Sök inställningar"
+  },
+  "searchTerms": {
+    "message": "Söktermer"
+  },
+  "supportFiltaquilla": {
+    "message": "Support FiltaQuilla"
+  },
+  "supportFiltaquilla_desc": {
+    "message": "FiltaQuilla is free to download and use - the best way to support the development team is by buying a license for quickFilters Pro. It is the most awesome filter extensions for managing and creating filters in a super convenient way."
+  },
+  "supportPage": {
+    "message": "Besök supportsida"
+  },
+  "supportPage_desc": {
+    "message": "Denna sida beskriver de olika åtgärderna och villkoren du kan lägga till i e-postfilter med FiltaQuilla."
+  }
+}

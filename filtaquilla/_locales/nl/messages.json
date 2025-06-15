@@ -1,0 +1,385 @@
+{
+  "aboutAndSupport": {
+    "message": "Over FiltaQuilla / Help"
+  },
+  "applyIncomingMails": {
+    "message": "Filters uitvoeren op inkomende e-mails"
+  },
+  "checkJavascriptActionBodyEnabled.accesskey": {
+    "message": "Y"
+  },
+  "checkJavascriptActionBodyEnabled.label": {
+    "message": "Javascript-actie met body"
+  },
+  "checkJavascriptEnabled.accesskey": {
+    "message": "J"
+  },
+  "checkJavascriptEnabled.label": {
+    "message": "Javascript"
+  },
+  "default": {
+    "message": "Standaard gebruiken"
+  },
+  "editJavascript": {
+    "message": "Javascript bewerken"
+  },
+  "enabled": {
+    "message": "Ingeschakeld"
+  },
+  "extensionDescription": {
+    "description": "Description of the extension.",
+    "message": "Genereer snel e-mailfilterregels door e-mails te slepen en neer te zetten en hun attributen te analyseren."
+  },
+  "extensionName": {
+    "description": "Name of the extension.",
+    "message": "FiltaQuilla"
+  },
+  "extensions.filtaquilla.description": {
+    "message": "Aangepaste acties e-mailfilter"
+  },
+  "filtaquilla.applyIncomingFilters": {
+    "message": "Inkomende filters toepassen"
+  },
+  "filtaquilla.applyIncomingFilters.accesskey": {
+    "message": "F"
+  },
+  "filtaquilla.editJavascript": {
+    "message": "Edit JavaScript…"
+  },
+  "filtaquilla.enabled": {
+    "message": "Ingeschakeld"
+  },
+  "filtaquilla.filters": {
+    "message": "Filters"
+  },
+  "filtaquilla.inherit": {
+    "message": "Erven"
+  },
+  "filtaquilla.javascriptAction.name": {
+    "message": "Javascript-actie"
+  },
+  "filtaquilla.javascriptActionBody.name": {
+    "message": "Javascript-actie met hoofdtekst"
+  },
+  "filtaquilla.launcher.launch": {
+    "message": "Launch the File!"
+  },
+  "filtaquilla.launcher.select": {
+    "message": "Select a File…"
+  },
+  "filtaquilla.playSound": {
+    "message": "Geluid afspelen"
+  },
+  "filtaquilla.runProgram.select": {
+    "message": "Select a Program…"
+  },
+  "filtaquilla.runProgram.title": {
+    "message": "Select a Program to run"
+  },
+  "filtaquilla.selectFolder.btn": {
+    "message": "Pick Folder…"
+  },
+  "filtaquilla.selectFolder.title": {
+    "message": "Select a Folder"
+  },
+  "filtaquilla.tone.select": {
+    "message": "Select a Sound File…"
+  },
+  "filterActions": {
+    "message": "Filteracties"
+  },
+  "fq.Bcc": {
+    "message": "Bcc"
+  },
+  "fq.Bcc.access": {
+    "message": "B"
+  },
+  "fq.addSender": {
+    "message": "Afzender aan adressenlijst toevoegen"
+  },
+  "fq.addSender.access": {
+    "message": "L"
+  },
+  "fq.attachmentRegex": {
+    "message": "RegEx-overeenkomst bijlagenaam"
+  },
+  "fq.bodyRegex": {
+    "message": "Body Regexp-wedstrijd"
+  },
+  "fq.copyAsRead": {
+    "message": "Als gelezen kopiëren"
+  },
+  "fq.copyAsRead.access": {
+    "message": "K"
+  },
+  "fq.detachAttachments": {
+    "message": "Bijlagen ontkoppelen naar"
+  },
+  "fq.detachAttachments.access": {
+    "message": "O"
+  },
+  "fq.filtaquilla.mustSelectFolder": {
+    "message": "U dient een doelmap op te geven"
+  },
+  "fq.fileNameMaxLength": {
+    "message": "Maximale lengte"
+  },
+  "fq.fileNameSpaceCharacter": {
+    "message": "Vervang spaties in bestandsnamen door"
+  },
+  "fq.fileNameWhiteList": {
+    "message": "Toegestane letters"
+  },
+  "fq.folderName": {
+    "message": "Mapnaam"
+  },
+  "fq.folderName.access": {
+    "message": "M"
+  },
+  "fq.hdrRegex": {
+    "message": "RegEx-overeenkomst header"
+  },
+  "fq.hdrRegex.access": {
+    "message": "H"
+  },
+  "fq.javascript": {
+    "message": "Javascript"
+  },
+  "fq.javascriptAction": {
+    "message": "Javascript-actie"
+  },
+  "fq.javascriptAction.access": {
+    "message": "V"
+  },
+  "fq.launchFile": {
+    "message": "Bestand uitvoeren"
+  },
+  "fq.launchFile.access": {
+    "message": "U"
+  },
+  "fq.markReplied": {
+    "message": "Als beantwoord markeren"
+  },
+  "fq.markReplied.access": {
+    "message": "E"
+  },
+  "fq.markUnread": {
+    "message": "Als ongelezen markeren"
+  },
+  "fq.markUnread.access": {
+    "message": "M"
+  },
+  "fq.moveLater": {
+    "message": "Later verplaatsen"
+  },
+  "fq.moveLater.access": {
+    "message": "A"
+  },
+  "fq.nobiff": {
+    "message": "Geen notificatie"
+  },
+  "fq.nobiff.access": {
+    "message": "N"
+  },
+  "fq.print": {
+    "message": "Afdrukken"
+  },
+  "fq.print.access": {
+    "message": "D"
+  },
+  "fq.printAllowDuplicates": {
+    "message": "Duplicaten toestaan"
+  },
+  "fq.printTools": {
+    "message": "Gebruikt PrintingTools NG voor afdrukken"
+  },
+  "fq.regex.caseInsensitive": {
+    "message": "Regex hoofdletterongevoelige Match"
+  },
+  "fq.regex.multilineanchors": {
+    "message": "Ondersteuning voor ankertekens '^' en '$' bij adreskoppen,"
+  },
+  "fq.removeflagged": {
+    "message": "Ster verwijderen"
+  },
+  "fq.removeflagged.access": {
+    "message": "S"
+  },
+  "fq.removekeyword": {
+    "message": "Label verwijderen"
+  },
+  "fq.removekeyword.access": {
+    "message": "A"
+  },
+  "fq.runFile": {
+    "message": "Programma uitvoeren"
+  },
+  "fq.runFile.access": {
+    "message": "R"
+  },
+  "fq.runFile.unicode": {
+    "message": "UTF-16 als standaard gebruiken"
+  },
+  "fq.runFile.unicode.tooltip": {
+    "message": "Gebruik de extra parameter @UTF16@ of @UTF8@ om individuele codering te gebruiken"
+  },
+  "fq.saveAttachment": {
+    "message": "Bijlagen opslaan in"
+  },
+  "fq.saveAttachment.access": {
+    "message": "J"
+  },
+  "fq.saveMsgAsFile": {
+    "message": "Bericht als bestand opslaan"
+  },
+  "fq.saveMsgAsFile.access": {
+    "message": "I"
+  },
+  "fq.archiveMessage": {
+    "message": "archief mail"
+  },
+  "fq.subjectBodyRegex": {
+    "message": "Reguliere expressie voor onderwerp- of e-mailtekst"
+  },
+  "fq.subjectRegex": {
+    "message": "RegEx-overeenkomst onderwerp"
+  },
+  "fq.subjectRegex.access": {
+    "message": "W"
+  },
+  "fq.subjectappend": {
+    "message": "Aan onderwerp toevoegen"
+  },
+  "fq.subjectappend.access": {
+    "message": "G"
+  },
+  "fq.subjectprepend": {
+    "message": "Aan onderwerp vooraf laten gaan"
+  },
+  "fq.subjectprepend.access": {
+    "message": "W"
+  },
+  "fq.threadAnyTag": {
+    "message": "Label van discussieberichten"
+  },
+  "fq.threadAnyTag.access": {
+    "message": "L"
+  },
+  "fq.threadHeadTag": {
+    "message": "Discussieheaderlabel"
+  },
+  "fq.threadHeadTag.access": {
+    "message": "D"
+  },
+  "fq.toneQuilla": {
+    "message": "Geluid afspelen (Tonequilla)"
+  },
+  "fq.trainGood": {
+    "message": "Als Gewenst trainen"
+  },
+  "fq.trainGood.access": {
+    "message": "G"
+  },
+  "fq.trainJunk": {
+    "message": "Als Ongewenst trainen"
+  },
+  "fq.trainJunk.access": {
+    "message": "O"
+  },
+  "helpFeatureTip": {
+    "message": "Details van deze functie weergeven"
+  },
+  "indexInGlobalDatabase": {
+    "message": "Index in Algemene database"
+  },
+  "inherit": {
+    "message": "Overnemen"
+  },
+  "inheritedProperties": {
+    "message": "Overgenomen eigenschappen"
+  },
+  "optionsIntro": {
+    "message": "Schakel alle items in die u beschikbaar wilt hebben in het venster ‘filterregels’. Herstart na de wijzigingen."
+  },
+  "pane1.title": {
+    "message": "FiltaQuilla-voorkeuren"
+  },
+  "prefPanel-inheritPane": {
+    "message": "Overgenomen eigenschappen"
+  },
+  "prefwindow.title": {
+    "message": "FiltaQuilla-voorkeuren"
+  },
+  "purchase-a-license": {
+    "message": "Koop een licentie."
+  },
+  "purchase-heading": {
+    "message": "Een licentie kopen!"
+  },
+  "quickFiltersPage": {
+    "message": "quickFilters downloaden!"
+  },
+  "quickFiltersPage_desc": {
+    "message": "Download deze geweldige add-on om uw filteracties een boost te geven. quickFilters maakt definiëren van filters en het beheer ervan een makkie."
+  },
+  "regex.accept": {
+    "message": "Accepteren"
+  },
+  "regex.btnBuilder.tooltip": {
+    "message": "Klik hier om je reguliere expressie te testen"
+  },
+  "regex.cancel": {
+    "message": "Annuleren"
+  },
+  "regex.collapseWhiteSpace": {
+    "message": "alle witruimtes samenvouwen"
+  },
+  "regex.contentfilter": {
+    "message": "Inhoudsbeperkingen:"
+  },
+  "regex.content.plaintext": {
+    "message": "platte-tekstdelen verwerken"
+  },
+  "regex.content.html": {
+    "message": "HTML-delen verwerken"
+  },
+  "regex.content.vcard": {
+    "message": "vCard-delen verwerken"
+  },
+  "regex.exclude.html": {
+    "message": "alle HTML-tags uitsluiten"
+  },
+  "regex.exclude.quotes": {
+    "message": "citaten uitsluiten (html+platte tekst)"
+  },
+  "regex.exclude.style": {
+    "message": "Globale &lt;style&gt;-tags en CSS uitsluiten"
+  },
+  "regex.expression": {
+    "message": "Reguliere expressie"
+  },
+  "regex.popup": {
+    "message": "Zoekopties…"
+  },
+  "regex.raw.help": {
+    "message": "FiltaQuilla verwerkt standaard platte-tekstonderdelen door alle alinea's samen te voegen, d.w.z. het verwijderen van regeleinden die door tekstterugloop zijn veroorzaakt. Dit verwijdert ook eventuele aanhalingstekens {>} aan het einde van een alinea. Activeer deze optie als je in het onbewerkte bericht wilt zoeken."
+  },
+  "regex.switches": {
+    "message": "Zoekopties"
+  },
+  "searchTerms": {
+    "message": "Zoekwoorden"
+  },
+  "supportFiltaquilla": {
+    "message": "Support FiltaQuilla"
+  },
+  "supportFiltaquilla_desc": {
+    "message": "FiltaQuilla is free to download and use - the best way to support the development team is by buying a license for quickFilters Pro. It is the most awesome filter extensions for managing and creating filters in a super convenient way."
+  },
+  "supportPage": {
+    "message": "Ondersteuningspagina bezoeken"
+  },
+  "supportPage_desc": {
+    "message": "Deze pagina beschrijft de verschillende acties en voorwaarden die met FiltaQuilla aan e-mailfilters kunt toevoegen."
+  }
+}

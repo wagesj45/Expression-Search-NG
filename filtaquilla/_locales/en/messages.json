@@ -1,0 +1,397 @@
+{
+  "aboutAndSupport": {
+    "message": "About FiltaQuilla / Help"
+  },
+  "applyIncomingMails": {
+    "message" : "Run filters on incoming mails"
+  },
+  "checkJavascriptActionBodyEnabled.accesskey": {
+    "message": "Y"
+  },
+  "checkJavascriptActionBodyEnabled.label": {
+    "message": "Javascript Action with Body"
+  },
+  "checkJavascriptEnabled.accesskey": {
+    "message": "J"
+  },
+  "checkJavascriptEnabled.label": {
+    "message": "Javascript"
+  },
+  "default": {
+    "message": "Use default"
+  },
+  "editJavascript": {
+    "message": "Edit Javascript"
+  },
+  "enabled": {
+    "message": "Enabled"
+  },
+  "extensionDescription": {
+    "description": "Description of the extension.",
+    "message": "Quickly generate mail filters on the fly, by dragging and dropping mails and analyzing their attributes."
+  },
+  "extensionName": {
+    "description": "Name of the extension.",
+    "message": "FiltaQuilla"
+  },
+  "extensions.filtaquilla.description": {
+    "message": "Mail filter custom actions"
+  },
+  "filtaquilla.applyIncomingFilters": {
+    "message": "Apply Incoming Filters"
+  },
+  "filtaquilla.applyIncomingFilters.accesskey": {
+    "message": "F"
+  },
+  "filtaquilla.editJavascript": {
+    "message": "Edit JavaScript…"
+  },
+  "filtaquilla.enabled": {
+    "message": "Enabled"
+  },
+  "filtaquilla.filters": {
+    "message": "Filters"
+  },
+  "filtaquilla.inherit": {
+    "message": "Inherit"
+  },
+  "filtaquilla.javascriptAction.name": {
+    "message": "Javascript Action"
+  },
+  "filtaquilla.javascriptActionBody.name": {
+    "message": "Javascript Action with Body"
+  },
+  "filtaquilla.launcher.launch": {
+    "message": "Launch the File!"
+  },
+  "filtaquilla.launcher.select": {
+    "message": "Select a File…"
+  },
+  "filtaquilla.playSound": {
+    "message": "Play Sound"
+  },
+  "filtaquilla.runProgram.select": {
+    "message": "Select a Program…"
+  },
+  "filtaquilla.runProgram.title": {
+    "message": "Select a Program to run"
+  },
+  "filtaquilla.selectFolder.btn": {
+    "message": "Pick Folder…"
+  },
+  "filtaquilla.selectFolder.title": {
+    "message": "Select a Folder"
+  },
+  "filtaquilla.template.select": {
+    "message": "Select a Template…"
+  },
+  "filtaquilla.tone.select": {
+    "message": "Select a Sound File…"
+  },
+  "filterActions": {
+    "message": "Filter Actions"
+  },
+  "fq.Bcc": {
+    "message": "Bcc"
+  },
+  "fq.Bcc.access": {
+    "message": "B"
+  },
+  "fq.addSender": {
+    "message": "Add Sender to Address List"
+  },
+  "fq.addSender.access": {
+    "message": "L"
+  },
+  "fq.attachmentRegex": {
+    "message": "Attachment Name Regex Match"
+  },
+  "fq.bodyRegex": {
+    "message": "Body Regexp match"
+  },
+  "fq.copyAsRead": {
+    "message": "Copy As Read"
+  },
+  "fq.copyAsRead.access": {
+    "message": "C"
+  },
+  "fq.detachAttachments": {
+    "message": "Detach Attachments To"
+  },
+  "fq.detachAttachments.access": {
+    "message": "D"
+  },
+  "fq.filtaquilla.mustSelectFolder": {
+    "message": "You must select a target folder"
+  },
+  "fq.fileNameMaxLength": {
+    "message": "Maximal length"
+  },
+  "fq.fileNameSpaceCharacter": {
+    "message": "Replace spaces in file names with"
+  },
+  "fq.fileNameWhiteList": {
+    "message": "Whitelisted letters"
+  },
+  "fq.folderName": {
+    "message": "Folder Name"
+  },
+  "fq.folderName.access": {
+    "message": "F"
+  },
+  "fq.hdrRegex": {
+    "message": "Header Regex Match"
+  },
+  "fq.hdrRegex.access": {
+    "message": "H"
+  },
+  "fq.javascript": {
+    "message": "Javascript"
+  },
+  "fq.javascriptAction": {
+    "message": "Javascript Action"
+  },
+  "fq.javascriptAction.access": {
+    "message": "V"
+  },
+  "fq.launchFile": {
+    "message": "Launch File"
+  },
+  "fq.launchFile.access": {
+    "message": "F"
+  },
+  "fq.markReplied": {
+    "message": "Mark Replied"
+  },
+  "fq.markReplied.access": {
+    "message": "E"
+  },
+  "fq.markUnread": {
+    "message": "Mark As Unread"
+  },
+  "fq.markUnread.access": {
+    "message": "M"
+  },
+  "fq.moveLater": {
+    "message": "Move Later"
+  },
+  "fq.moveLater.access": {
+    "message": "A"
+  },
+  "fq.nobiff": {
+    "message": "Do Not Notify"
+  },
+  "fq.nobiff.access": {
+    "message": "N"
+  },
+  "fq.print": {
+    "message": "Print"
+  },
+  "fq.print.access": {
+    "message": "P"
+  },
+  "fq.printAllowDuplicates": {
+    "message": "Allow Duplicates"
+  },
+  "fq.printTools": {
+    "message": "Use PrintingTools NG for printing"
+  },
+  "fq.regex.caseInsensitive": {
+    "message": "Regex case-insensitive Match"
+  },
+  "fq.regex.multilineanchors": {
+    "message": "Support anchor tokens '^' and '$' with address headers"
+  },
+  "fq.removeflagged": {
+    "message": "Remove Star"
+  },
+  "fq.removeflagged.access": {
+    "message": "S"
+  },
+  "fq.removekeyword": {
+    "message": "Remove Tag"
+  },
+  "fq.removekeyword.access": {
+    "message": "O"
+  },
+  "fq.runFile": {
+    "message": "Run Program"
+  },
+  "fq.runFile.access": {
+    "message": "R"
+  },
+  "fq.runFile.unicode": {
+    "message": "Default to UTF-16"
+  },
+  "fq.runFile.unicode.tooltip": {
+    "message": "Use the additional parameter @UTF16@ or @UTF8@ to use individual encoding"
+  },
+  "fq.saveAttachment": {
+    "message": "Save Attachments To"
+  },
+  "fq.saveAttachment.access": {
+    "message": "H"
+  },
+  "fq.saveMsgAsFile": {
+    "message": "Save Message as File"
+  },
+  "fq.saveMsgAsFile.access": {
+    "message": "I"
+  },
+  "fq.smartTemplate.fwd": {
+    "message": "Forward with SmartTemplate"
+  },
+  "fq.smartTemplate.rsp": {
+    "message": "Reply with SmartTemplate"
+  },
+  "fq.archiveMessage": {
+    "message": "Archive message"
+  },
+  "fq.subjectBodyRegex": {
+    "message": "Subject or Body Regexp match"
+  },
+  "fq.subjectRegex": {
+    "message": "Subject Regex Match"
+  },
+  "fq.subjectRegex.access": {
+    "message": "S"
+  },
+  "fq.subjectappend": {
+    "message": "Append to Subject"
+  },
+  "fq.subjectappend.access": {
+    "message": "A"
+  },
+  "fq.subjectprepend": {
+    "message": "Prepend to Subject"
+  },
+  "fq.subjectprepend.access": {
+    "message": "U"
+  },
+  "fq.threadAnyTag": {
+    "message": "Tag of Thread Messages"
+  },
+  "fq.threadAnyTag.access": {
+    "message": "T"
+  },
+  "fq.threadHeadTag": {
+    "message": "Tag of Thread Head"
+  },
+  "fq.threadHeadTag.access": {
+    "message": "H"
+  },
+  "fq.toneQuilla": {
+    "message": "Play Sound (Tonequilla)"
+  },
+  "fq.trainGood": {
+    "message": "Train As Good"
+  },
+  "fq.trainGood.access": {
+    "message": "G"
+  },
+  "fq.trainJunk": {
+    "message": "Train as Junk"
+  },
+  "fq.trainJunk.access": {
+    "message": "J"
+  },
+  "helpFeatureTip": {
+    "message": "Show Details on this feature"
+  },
+  "indexInGlobalDatabase": {
+    "message": "Index in Global Database"
+  },
+  "inherit": {
+    "message": "Inherit"
+  },
+  "inheritedProperties": {
+    "message": "Inherited Properties"
+  },
+  "optionsIntro": {
+    "message": "Enable all items that you want to have available in the 'filter rules' dialog. Restart after changes."
+  },
+  "pane1.title": {
+    "message": "FiltaQuilla Preferences"
+  },
+  "prefPanel-inheritPane": {
+    "message": "Inherited Properties"
+  },
+  "prefwindow.title": {
+    "message": "FiltaQuilla preferences"
+  },
+  "purchase-a-license": {
+    "message": "Purchase a license."
+  },
+  "purchase-heading": {
+    "message": "Buying a License!"
+  },
+  "quickFiltersPage": {
+    "message": "Get quickFilters!"
+  },
+  "quickFiltersPage_desc": {
+    "message": "Download this awesome Add-on to turbo-charge your filtering. quickFilters makes filter definition and management a breeze."
+  },
+  "regex.accept": {
+    "message": "Accept"
+  },
+  "regex.btnBuilder.tooltip": {
+    "message": "click here to test your regular expression"
+  },
+  "regex.cancel": {
+    "message": "Cancel"
+  },
+  "regex.collapseWhiteSpace": {
+    "message": "collapse all whitespace"
+  },
+  "regex.contentfilter": {
+    "message": "Content restrictions:"
+  },
+  "regex.content.plaintext": {
+    "message": "process plain text parts"
+  },
+  "regex.content.html": {
+    "message": "process html parts"
+  },
+  "regex.content.raw": {
+    "message": "Raw mode: no preprocessing on plaintext parts."
+  },
+  "regex.content.vcard": {
+    "message": "process vcard parts"
+  },
+  "regex.exclude.html": {
+    "message": "exclude all HTML tags"
+  },
+  "regex.exclude.quotes": {
+    "message": "exclude quotes (html+plain text)"
+  },
+  "regex.exclude.style": {
+    "message": "exclude global &lt;style&gt; tags + CSS"
+  },
+  "regex.expression": {
+    "message": "Regular expression"
+  },
+  "regex.popup": {
+    "message": "Search Options…"
+  },
+  "regex.raw.help": {
+    "message": "FiltaQuilla by default prepares plain text parts by contracting all paragraphs, i.e. removing line breaks which are caused by reflow, this will also remove trailing quote marks {>} inside a paragraph. Activate this option if you want to search the unprocessed message instead."
+  },
+  "regex.switches": {
+    "message": "Search switches"
+  },
+  "searchTerms": {
+    "message": "Search Terms"
+  },
+  "supportFiltaquilla": {
+    "message": "Support FiltaQuilla"
+  },
+  "supportFiltaquilla_desc": {
+    "message": "FiltaQuilla is free to download and use - the best way to support the development team is by buying a license for quickFilters Pro. It is the most awesome filter extensions for managing and creating filters in a super convenient way."
+  },
+  "supportPage": {
+    "message": "Visit Support Page"
+  },
+  "supportPage_desc": {
+    "message": "This Page describes the different actions and conditions you can add to mail filters with FiltaQuilla."
+  }
+}

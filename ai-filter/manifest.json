@@ -14,6 +14,14 @@
         "script": "experiment/api.js",
         "events": [ "startup" ]
       }
+    },
+    "DomContentScript": {
+      "schema": "experiment/DomContentScript/schema.json",
+      "parent": {
+        "scopes": [ "addon_parent" ],
+        "paths": [ [ "DomContentScript" ] ],
+        "script": "experiment/DomContentScript/implementation.js"
+      }
     }
   },
   "options_ui": {

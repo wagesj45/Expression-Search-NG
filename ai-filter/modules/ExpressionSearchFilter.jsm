@@ -14,6 +14,7 @@ class CustomerTermBase {
     this.name = this.extension.localeData.localizeMessage(nameId);
     this.operators = operators;
     this.cache = new Map();
+    setConfig();
 
     console.log(`[ai-filter][ExpressionSearchFilter] Initialized term base "${this.id}"`);
   }
@@ -62,11 +63,10 @@ function getPlainText(msgHdr) {
 }
 
 let gEndpoint = "http://127.0.0.1:5000/v1/classify";
-function setConfig({ endpoint } = {}) {
-  if (endpoint) {
-    console.log(`[ai-filter][ExpressionSearchFilter] Endpoint updated to ${endpoint}`);
+async function setConfig() {
+    const { endpoint = gEndpoint } = await browser.storage.local.get("endpoint");
     gEndpoint = endpoint;
-  }
+    console.log(`[ai-filter][ExpressionSearchFilter] Endpoint set to ${gEndpoint}`);
 }
 
 function buildPrompt(body, criterion) {
@@ -129,6 +129,9 @@ class ClassificationTerm extends CustomerTermBase {
         const result = await res.json();
         matched = result.match === true;
         console.log(`[ai-filter][ExpressionSearchFilter] Received response:`, result);
+
+        console.log(`[ai-filter][ExpressionSearchFilter] Caching:`, key);
+        this.cache.set(key, matched);
       }
     } catch (e) {
       console.error(`[ai-filter][ExpressionSearchFilter] HTTP request failed:`, e);
@@ -139,7 +142,6 @@ class ClassificationTerm extends CustomerTermBase {
       console.log(`[ai-filter][ExpressionSearchFilter] Operator is "doesn't match" → inverting to ${matched}`);
     }
 
-    this.cache.set(key, matched);
     console.log(`[ai-filter][ExpressionSearchFilter] Final match result: ${matched}`);
     return matched;
   }

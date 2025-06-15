@@ -70,7 +70,7 @@ var aiFilter = class extends ExtensionCommon.ExtensionAPI {
                             gTerm = new mod.ClassificationTerm();
                         }
                         console.log("[ai-filter][api] calling gTerm.match()");
-                        let matchResult = gTerm.match(
+                        let matchResult = await gTerm.match(
                             msg.msgHdr,
                             msg.value,
                             Ci.nsMsgSearchOp.Contains

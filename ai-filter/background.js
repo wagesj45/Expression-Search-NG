@@ -20,7 +20,7 @@ console.log("[ai-filter] background.js loaded – ready to classify");
         try {
             await browser.DomContentScript.registerWindow(
                 "chrome://messenger/content/FilterEditor.xhtml",
-                "chrome://aifilter/content/filterEditor.js"
+                "resource://aifilter/content/filterEditor.js"
             );
             console.log("[ai-filter] registered FilterEditor content script");
         } catch (e) {
